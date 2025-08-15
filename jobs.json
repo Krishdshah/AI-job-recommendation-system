@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Data Scientist",
+    "company": "TechCorp",
+    "location": "New York",
+    "skills": ["Python", "Machine Learning", "Data Analysis"],
+    "salary": 1200000
+  },
+  {
+    "title": "Frontend Developer",
+    "company": "Webify",
+    "location": "San Francisco",
+    "skills": ["React", "JavaScript", "CSS", "HTML"],
+    "salary": 950000
+  },
+  {
+    "title": "Backend Developer",
+    "company": "CodeBase",
+    "location": "Austin",
+    "skills": ["Python", "Flask", "SQL", "APIs"],
+    "salary": 1050000
+  },
+  {
+    "title": "Full Stack Developer",
+    "company": "DevWorks",
+    "location": "Remote",
+    "skills": ["JavaScript", "Node.js", "React", "MongoDB"],
+    "salary": 1100000
+  },
+  {
+    "title": "Machine Learning Engineer",
+    "company": "AI Solutions",
+    "location": "Boston",
+    "skills": ["Python", "TensorFlow", "Deep Learning", "NLP"],
+    "salary": 1300000
+  },
+  {
+    "title": "Data Analyst",
+    "company": "InsightCorp",
+    "location": "Seattle",
+    "skills": ["Excel", "SQL", "Power BI", "Python"],
+    "salary": 850000
+  },
+  {
+    "title": "Mobile App Developer",
+    "company": "Appify",
+    "location": "Los Angeles",
+    "skills": ["Flutter", "Dart", "Firebase", "UI/UX"],
+    "salary": 920000
+  },
+  {
+    "title": "Cloud Engineer",
+    "company": "CloudTech",
+    "location": "Chicago",
+    "skills": ["AWS", "Docker", "Kubernetes", "Linux"],
+    "salary": 1250000
+  }
+]
