@@ -26,6 +26,9 @@ https://github.com/Krishdshah/AI-job-recommendation-system/blob/main/demo.mp4
 
 ---
 
+## 🌐Deployed
+[Click Here](https://team-neotech-ai-recommendation-system.streamlit.app/)
+
 ## ✨ Features
 - Personalized job recommendations  
 - Filtering by role, skills, location, and experience  
