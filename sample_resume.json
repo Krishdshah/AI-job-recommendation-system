@@ -1,12 +1,53 @@
 {
-  "values": ["Impactful Work", "Mentorship & Career Development", "Work-Life Balance"],
-  "role_types": ["Full-Time", "Contract"],
-  "titles": ["UI/UX Designer", "Senior Product Designer"],
-  "locations": ["Remote in USA", "New York City"],
-  "role_level": ["Senior (5 to 8 years)"],
-  "leadership_preference": "Individual Contributor",
-  "company_size": ["51-200 Employees", "201-500 Employees"],
-  "industries": ["AI & Machine Learning", "Design"],
-  "skills": ["Figma", "UI/UX Design", "Wireframing", "Prototyping","python","AWS"],
-  "min_salary": 185000
+  "name": "Priyanshu Goyal",
+  "email": "priyanshu.goyal@example.com",
+  "phone": "+91-9876543210",
+  "summary": "Business Analyst with 2+ years of experience in SQL, Power BI, Excel, and Data Analysis. Skilled in Python, Machine Learning, and NLP for advanced analytics. Seeking opportunities in AI & Machine Learning, Finance, and Software industries.",
+  
+  "skills": [
+    "Python",
+    "SQL",
+    "Excel",
+    "Power BI",
+    "NLP",
+    "Machine Learning",
+    "React",
+    "AWS",
+    "JavaScript"
+  ],
+  
+  "experience": [
+    {
+      "title": "Business Analyst",
+      "company": "Tech Solutions Pvt Ltd",
+      "duration": "Jan 2023 - Present",
+      "location": "Paris",
+      "description": "Worked as Business Analyst in a cross-functional team of 51–200 employees. Delivered impactful work through transparency, communication, and mentorship. Built dashboards in Power BI and automated reporting with SQL & Python."
+    },
+    {
+      "title": "Data Analyst Intern",
+      "company": "Analytics Hub",
+      "duration": "Jun 2022 - Dec 2022",
+      "location": "Remote",
+      "description": "Supported finance clients by building machine learning models in Python. Delivered insights using Excel, SQL, and Power BI. Focused on work-life balance and impactful contributions."
+    }
+  ],
+
+  "education": [
+    {
+      "degree": "B.Tech in Computer Science",
+      "university": "SRM Institute of Science and Technology",
+      "year": "2026"
+    }
+  ],
+
+  "preferences": {
+    "titles": ["Business Analyst", "Data Analyst"],
+    "locations": ["Paris", "Remote"],
+    "role_types": ["Full-Time", "Contract"],
+    "industries": ["AI & Machine Learning", "Finance", "Software"],
+    "company_size": ["51-200 Employees", "201-500 Employees"],
+    "values": ["Transparency & Communication", "Mentorship & Career Development", "Work-Life Balance", "Impactful Work"],
+    "min_salary": 100000
+  }
 }
