@@ -1,3 +1,9 @@
 streamlit
+pdfplumber
+PyPDF2
 sentence-transformers
 torch
+transformers
+scikit-learn
+numpy
+pandas
