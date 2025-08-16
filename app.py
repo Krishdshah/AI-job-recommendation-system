@@ -89,7 +89,7 @@ def compute_match(job, prefs):
     return round(final_score * 100, 2)
 
 # UI
-st.title("AI Job Recommendation System - Team NeoTech ")
+st.title("SkillSync :- AI Job Recommendation System - Team NeoTech ")
 preferences = {}
 input_method = st.radio(
     "Choose input method",
