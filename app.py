@@ -108,7 +108,7 @@ if input_method == "Upload Resume":
 
         # Extract basic details
         skills_keywords = ["Python","Java","SQL","React","Machine Learning","AWS","Excel",
-                           "Flask","Django","TensorFlow","NLP","Power BI","JavaScript","C++"]
+                          "Flask","Django","TensorFlow","NLP","Power BI","JavaScript","C++"]
         candidate_skills = [
             s for s in skills_keywords
             if re.search(r"\b" + re.escape(s) + r"\b", resume_text, re.I)
@@ -132,21 +132,27 @@ if input_method == "Upload Resume":
         st.subheader("Review & Modify Extracted Preferences")
         values = st.multiselect("Work Values",
                                 ["Impactful Work", "Mentorship & Career Development",
-                                 "Work-Life Balance", "Transparency & Communication"])
-        role_types = st.multiselect("Role Types", ["Full-Time", "Contract", "Part-Time"])
+                                 "Work-Life Balance", "Transparency & Communication"],
+                                default=["Impactful Work"]) # Default value added
+        role_types = st.multiselect("Role Types", ["Full-Time", "Contract", "Part-Time"],
+                                    default=["Full-Time"]) # Default value added
         titles = st.text_area("Preferred Job Titles (comma separated)",
                               value=candidate_title).split(",")
         locations = st.text_area("Preferred Locations (comma separated)",
                                  value=candidate_location).split(",")
-        role_level = st.text_input("Role Level (e.g., Senior (5 to 8 years))")
-        leadership_preference = st.text_input("Leadership Preference (e.g., Individual Contributor)")
+        role_level = st.text_input("Role Level (e.g., Senior (5 to 8 years))",
+                                   value="Junior (0 to 2 years)") # Default value added
+        leadership_preference = st.text_input("Leadership Preference (e.g., Individual Contributor)",
+                                              value="Individual Contributor") # Default value added
         company_size = st.multiselect("Company Size",
                                       ["1-50 Employees", "51-200 Employees",
-                                       "201-500 Employees", "500+ Employees"])
+                                       "201-500 Employees", "500+ Employees"],
+                                      default=["51-200 Employees", "201-500 Employees"]) # Default value added
         industries = st.multiselect("Industries",
                                     ["AI & Machine Learning", "Design", "Software", "Finance",
                                      "E-commerce", "Automotive", "Media & Entertainment",
-                                     "Semiconductors"])
+                                     "Semiconductors"],
+                                    default=["Software"]) # Default value added
         skills = st.text_area("Skills (comma separated)",
                               value=", ".join(candidate_skills)).split(",")
         min_salary = st.number_input("Minimum Salary", min_value=0, value=50000, step=5000)
@@ -169,16 +175,25 @@ if input_method == "Upload Resume":
 
 elif input_method == "Fill out form":
     st.subheader("Enter Your Job Preferences")
-    values = st.multiselect("Work Values", ["Impactful Work", "Mentorship & Career Development", "Work-Life Balance", "Transparency & Communication"])
-    role_types = st.multiselect("Role Types", ["Full-Time", "Contract", "Part-Time"])
-    titles = st.text_area("Preferred Job Titles (comma separated)").split(",")
-    locations = st.text_area("Preferred Locations (comma separated)").split(",")
-    role_level = st.text_input("Role Level (e.g., Senior (5 to 8 years))")
-    leadership_preference = st.text_input("Leadership Preference (e.g., Individual Contributor)")
-    company_size = st.multiselect("Company Size", ["1-50 Employees", "51-200 Employees", "201-500 Employees", "500+ Employees"])
-    industries = st.multiselect("Industries", ["AI & Machine Learning", "Design", "Software", "Finance", "E-commerce", "Automotive", "Media & Entertainment", "Semiconductors"])
-    skills = st.text_area("Skills (comma separated)").split(",")
-    min_salary = st.number_input("Minimum Salary", min_value=0, value=50000, step=5000)
+    values = st.multiselect("Work Values", ["Impactful Work", "Mentorship & Career Development", "Work-Life Balance", "Transparency & Communication"],
+                            default=["Impactful Work", "Work-Life Balance"]) # Default value added
+    role_types = st.multiselect("Role Types", ["Full-Time", "Contract", "Part-Time"],
+                                default=["Full-Time"]) # Default value added
+    titles = st.text_area("Preferred Job Titles (comma separated)",
+                          value="Software Engineer, Data Scientist").split(",") # Default value added
+    locations = st.text_area("Preferred Locations (comma separated)",
+                             value="Remote, San Francisco").split(",") # Default value added
+    role_level = st.text_input("Role Level (e.g., Senior (5 to 8 years))",
+                               value="Mid-Level (3 to 5 years)") # Default value added
+    leadership_preference = st.text_input("Leadership Preference (e.g., Individual Contributor)",
+                                          value="Individual Contributor") # Default value added
+    company_size = st.multiselect("Company Size", ["1-50 Employees", "51-200 Employees", "201-500 Employees", "500+ Employees"],
+                                  default=["51-200 Employees"]) # Default value added
+    industries = st.multiselect("Industries", ["AI & Machine Learning", "Design", "Software", "Finance", "E-commerce", "Automotive", "Media & Entertainment", "Semiconductors"],
+                                default=["Software", "AI & Machine Learning"]) # Default value added
+    skills = st.text_area("Skills (comma separated)",
+                          value="Python, SQL, AWS, Machine Learning").split(",") # Default value added
+    min_salary = st.number_input("Minimum Salary", min_value=0, value=75000, step=5000) # Default value added
 
     preferences = {
         "values": [v.strip() for v in values if v.strip()],
@@ -224,10 +239,7 @@ if st.button("Run Recommendations"):
                 col1, col2 = st.columns([3, 1])
                 with col1:
                     st.markdown(f"""
-                        **{r['job_title']}**  
-                        📌 *{r['location']}*  
-                        🏢 *{r['industry']}*  
-                        💼 *{r['employment_type']}*
+                        **{r['job_title']}** 📌 *{r['location']}* 🏢 *{r['industry']}* 💼 *{r['employment_type']}*
                     """)
                 with col2:
                     st.markdown(
